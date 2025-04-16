@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get(
     "SECRET_KEY", "django-insecure-3r4y$y04o#(n+1v0+gdpggwiq!v=g$b*0@b(c1_*uxq3t_5eh^"
 )
 
-DEBUG = os.environ.get("DEBUG", "False") == "True"
+DEBUG = os.environ.get("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = [
     os.environ.get("PRODUCTION_HOST"),
@@ -116,3 +116,18 @@ if not DEBUG:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "DEBUG" if DEBUG else "WARNING",
+    },
+}

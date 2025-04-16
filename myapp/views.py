@@ -13,3 +13,8 @@ class AutorViewSet(viewsets.ModelViewSet):
 class LibroViewSet(viewsets.ModelViewSet):
     queryset = Libro.objects.all()
     serializer_class = LibroSerializer
+
+
+# 👇 NUEVA vista de bienvenida
+def home_view(request):
+    return render(request, "myapp/home.html")

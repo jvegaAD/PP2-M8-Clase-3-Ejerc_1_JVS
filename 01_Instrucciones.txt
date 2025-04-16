@@ -1,0 +1,58 @@
+Crear el Entorno Virtual
+
+python -m venv venv
+
+.\venv\Scripts\activate
+
+Desactivar
+
+deactivate
+
+
+GitHub
+realizar un Fork del repositorio:  https://github.com/rarce/django-drf-cicd-example
+
+
+
+Descargar el repositorio desde mi cuenta:
+
+git clone https://github.com/jvegaAD/PP2-M8-Clase-3-Ejerc_1-example.git .
+
+
+
+Alternativa 1:  Instalar el Paquete
+pip install -r requirements.txt
+
+
+
+------------------------
+Base datos POstgres:
+cuenta: jvega.ad
+
+https://supabase.com/dashboard/project/kcqdosjvlstitbeyeiqt
+
+
+Base de datos:  PP2-M8-Clase 3
+
+host: aws-0-us-east-1.pooler.supabase.com
+port: 6543
+database: postgres
+user: postgres.kcqdosjvlstitbeyeiqt
+pool_mode: transaction
+
+
+------------------------
+
+
+Super USUARIO
+admin
+c----n5---4
+
+------------------------
+
+
+
+
+
+
+

@@ -1,4 +1,18 @@
+------------------------
+Plataformas
+------------------------
+
+https://supabase.com/ >  Jvega.ad
+
+render.com  >  Jvega.ad
+
+https://pp2-m8-clase-3-ejerc-1-jvs.onrender.com/
+
+
+
+------------------------
 Crear el Entorno Virtual
+------------------------
 
 python -m venv venv
 
@@ -9,12 +23,15 @@ Desactivar
 deactivate
 
 
+------------------------
 GitHub
+------------------------
 realizar un Fork del repositorio:  https://github.com/rarce/django-drf-cicd-example
 
 
-
+------------------------------------------------
 Descargar el repositorio desde mi cuenta:
+------------------------------------------------
 
 git clone https://github.com/jvegaAD/PP2-M8-Clase-3-Ejerc_1-example.git .
 
@@ -25,34 +42,65 @@ pip install -r requirements.txt
 
 
 
-------------------------
+------------------------------------------------
 Base datos POstgres:
 cuenta: jvega.ad
+------------------------------------------------
+
 
 https://supabase.com/dashboard/project/kcqdosjvlstitbeyeiqt
 
 
 Base de datos:  PP2-M8-Clase 3
 
-host: aws-0-us-east-1.pooler.supabase.com
-port: 6543
-database: postgres
-user: postgres.kcqdosjvlstitbeyeiqt
-pool_mode: transaction
+Transaction pooler
+
+DB_HOST = "aws-0-us-east-1.pooler.supabase.com"
+DB_PORT = "6543"
+DB_NAME = "postgres"
+DB_USER = "postgres.kcqdosjvlstitbeyeiqt"  # Este usuario sí es válido
+DB_PASSWORD = "caparason5544"
 
 
-------------------------
-
-
+----------------------------------
 Super USUARIO
+----------------------------------
+primero:
 admin
 c----n5---4
 
-------------------------
+segundo:
+admin_2
+c----n5---4
 
 
 
 
+----------------------------------
+actualizar el requirements.txt
+----------------------------------
+ pip freeze > requirements.txt
+
+
+
+
+----------------------------------
+Subir a Git Hub un archivo en particular
+----------------------------------
+
+git add .env.example
+git add .  # agrega todos los demás cambios (código, ajustes)
+git commit -m "🔐 Configuración lista para conexión con Supabase vía Transaction Pooler"
+git push origin main  # o la rama que estés usando
+
+
+
+----------------------------------
+Subir a Git Hub todos lso archivos
+----------------------------------
+git add .                     # Agrega todos los archivos nuevos y cambios
+git commit -m "🚀 Subida completa: configuración Supabase, conexión directa y entorno listo"
+git push origin main          # O reemplaza 'main' por el nombre de tu rama
 
 
 

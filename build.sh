@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
-# Exit on error
-set -o errexit
 
-# Modify this line as needed for your package manager (pip, poetry, etc.)
+# Activar modo estricto
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# Comandos para preparación del entorno
+echo "✔ Instalando dependencias..."
+pip install --upgrade pip
 pip install -r requirements.txt
 
-# Convert static asset files
-python manage.py collectstatic --no-input
-
-# Apply any outstanding database migrations
+echo "✔ Aplicando migraciones..."
 python manage.py migrate
 
-# python -m gunicorn myproject.asgi:application -k uvicorn.workers.UvicornWorker
+echo "✔ Recolectando archivos estáticos..."
+python manage.py collectstatic --no-input
